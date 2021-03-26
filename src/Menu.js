@@ -30,7 +30,11 @@ function Menu({ victuals, title }) {
               ))}
             </ListGroup>
           </CardBody>
+          <form action={`/${title}/new`}>
+          <button className="btn btn-light">{`Add to ${title}`}</button>
+          </form>
         </Card>
+      
       </section>
     );
   }

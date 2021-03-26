@@ -21,6 +21,19 @@ class SnackOrBoozeApi {
     return result.data;
   }
 
+  static async sendVictuals(title, id, name, description, recipe, serve) {
+    await axios.post(`${BASE_API_URL}/${title}`, {
+      id: id,
+      name: name,
+      description: description,
+      recipe: recipe,
+      serve: serve 
+    });
+  
+  }
+
+ 
+
 }
 
 export default SnackOrBoozeApi;
